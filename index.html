@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets de David</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      color: #2c3e50;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.25rem;
+      color: #2980b9;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mes projets Quarto</h1>
+  <p>Exploration de données, reproductibilité, et visualisation — tout en HTML 📊</p>
+
+  <div class="grid">
+    <a class="card" href="projet_rna_seq/index.html" target="_blank">
+      <h2>Analyse RNA-seq</h2>
+      <p>Pipeline d’analyse d’expression différentielle chez Populus.</p>
+    </a>
+
+    <a class="card" href="climat_terras/index.html" target="_blank">
+      <h2>Données TerraClimate</h2>
+      <p>Extraction et visualisation de variables climatiques multi-sites.</p>
+    </a>
+
+    <a class="card" href="projet_0phyto/index.html" target="_blank">
+      <h2>Observatoires 0Phyto</h2>
+      <p>Données des essais agroécologiques et suivi des indicateurs.</p>
+    </a>
+
+    <!-- Ajoute d'autres cartes ici -->
+  </div>
+
+  <footer>
+    Dernière mise à jour : avril 2025 — David
+  </footer>
+
+</body>
+</html>

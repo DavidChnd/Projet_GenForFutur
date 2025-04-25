@@ -1,0 +1,32 @@
+---
+title: "testouiiitt"
+author: "David Chassagnaud"
+date: "`r Sys.Date()`"
+
+format:
+  html:
+    toc: true         # Active la table des matières
+    toc-depth: 2      # Niveau de profondeur de la table des matières (1 à 6)
+    toc-location: right  # Position : left, right ou float
+    number-sections: true  # Numérote les sections
+    theme: united      # Tu peux changer le thème : cosmo, flatly, united, etc.
+    code-fold: true   # Permet de replier/déplier les blocs de code
+    code-tools: true  # Affiche les outils (copier le code, etc.)
+    smooth-scroll: true  # Ajoute un défilement fluide
+    includes:
+      in-header: |
+        <style>
+          /* Change la couleur de fond du body pour tester */
+          body {
+            background-color: lightblue;
+          }
+        </style>
+---
+# Bienvenue sur ma vitrine de projet !  
+Dans cette vitrine, vous pouvez explorer différentes analyses et documentations liées à mon projet.
+
+---
+
+## Sections  
+- [Analyses climatiques](https://davidchnd.github.io/GFF_SPEI/qmd/SPEI_prov.html)  
+- [Analyse isotopiques](https://davidchnd.github.io/GFF_Isotope/qmd/GFF_isotope.html)

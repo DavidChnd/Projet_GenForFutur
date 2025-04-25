@@ -1,0 +1,20 @@
+/* style.css */
+.btn-main {
+  background-color: #4CAF50; /* Couleur de fond verte */
+  color: white; /* Texte blanc */
+  padding: 12px 20px; /* Espacement interne */
+  text-align: center; /* Texte centré */
+  text-decoration: none; /* Supprimer la ligne sous le texte */
+  display: inline-block;
+  font-size: 16px; /* Taille du texte */
+  margin: 4px 2px; /* Espacement entre les boutons */
+  cursor: pointer; /* Changer le curseur en pointeur */
+  border-radius: 12px; /* Bordure arrondie */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  transition: all 0.3s ease; /* Animation pour l'effet hover */
+}
+
+.btn-main:hover {
+  background-color: #45a049; /* Changement de couleur au survol */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
