@@ -45,6 +45,7 @@
       object-position: center;
       border-radius: 28px;
       box-shadow: 0 4px 12px var(--card-shadow);
+      transition: filter 0.3s ease; /* Transition de luminosité */
     }
 
     /* Animation fade pour l'image */
@@ -55,6 +56,11 @@
       100% {
         opacity: 1;
       }
+    }
+
+    /* Effet de luminosité au survol */
+    .banner img:hover {
+      filter: brightness(1.3); /* Augmente la luminosité lorsqu'on survole */
     }
 
     .grid {
@@ -129,6 +135,14 @@
       vertical-align: middle;
       margin-left: 8px;
     }
+
+    .footer a {
+      margin-left: 8px; /* Espacement entre les icônes */
+    }
+
+    .footer span {
+      margin-right: auto; /* Alignement du texte à gauche */
+    }
   </style>
 </head>
 <body>
@@ -157,6 +171,9 @@
     <span>© David Chassagnaud</span>
     <a href="https://github.com/DavidChnd" target="_blank">
       <img src="logo-github.png" alt="GitHub">
+    </a>
+    <a href="mailto:david.chassagnaud@gmail.com" target="_blank">
+      <img src="logo-gmail.png" alt="Gmail">
     </a>
   </div>
 </body>
