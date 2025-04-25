@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow"> <!-- Empêche l'indexation et le suivi des liens -->
-  <title>Projets GenForFutur</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Projets David Chassagnaud</title>
   <style>
     :root {
-      --peche: #fae4d4;
-      --vert: #5e7c3b;
-      --fond: #ffffff;
+      --fond: #f5f5f7;
+      --card-bg: #ffffff;
       --texte: #2c3e50;
-      --button-bg: #5e7c3b;
-      --button-color: white;
-      --button-hover-bg: #4a6630;
+      --card-shadow: rgba(0, 0, 0, 0.1);
+      --accent: #3d5a40;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--fond);
       color: var(--texte);
       margin: 0;
@@ -28,12 +25,15 @@
       align-items: center;
     }
 
-    /* Style de la bannière */
+    .spacer-top {
+      height: 40px;
+    }
+
     .banner {
-      width: 100%;
+      width: 90%;
       height: auto;
       overflow: hidden;
-      position: relative;
+      margin-bottom: 30px;
     }
 
     .banner img {
@@ -41,147 +41,101 @@
       height: auto;
       object-fit: cover;
       object-position: center;
-      opacity: 0;
-      animation: fadeIn 2s ease-out forwards;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    /* Titre GenForFutur avec un lien */
-    .title {
-      color: var(--vert);
-      margin: 2rem 0 1rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
-      opacity: 0;
-      animation: fadeIn 1.5s ease-out forwards;
-    }
-
-    .title a {
-      text-decoration: none;
-      color: var(--vert);
-      transition: color 0.3s;
-    }
-
-    .title a:hover {
-      color: var(--button-bg);
-    }
-
-    /* Style du bouton */
-    .btn {
-      background-color: var(--button-bg);
-      color: var(--button-color);
-      padding: 10px 20px;
-      font-size: 1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      text-align: center;
-      display: inline-block;
-      transition: background-color 0.3s, transform 0.3s;
-      margin-top: 1rem;
-      opacity: 0;
-      animation: fadeIn 2s ease-out forwards;
-    }
-
-    .btn:hover {
-      background-color: var(--button-hover-bg);
-      transform: translateY(-3px);
+      border-radius: 28px;
+      box-shadow: 0 4px 12px var(--card-shadow);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
       width: 100%;
       max-width: 1000px;
       padding: 2rem;
-      opacity: 0;
-      animation: fadeIn 2.5s ease-out forwards;
     }
 
     .card {
-      background-color: var(--peche);
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
+      background-color: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: 0 4px 12px var(--card-shadow);
+      padding: 2rem 1.5rem;
+      transition: transform 0.4s ease, box-shadow 0.4s;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      text-align: left;
+      min-height: 220px;
+      position: relative;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: scale(1.02);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
     .card h2 {
-      margin: 0 0 0.5rem;
-      font-size: 1.25rem;
-      color: var(--vert);
+      margin: 0 0 1rem;
+      font-size: 1.4rem;
     }
 
-    .card p {
-      margin: 0;
-      color: #444;
-      font-size: 0.95rem;
+    .arrow {
+      font-size: 1.6rem;
+      color: var(--accent);
+      align-self: flex-end;
+      margin-top: auto;
     }
 
-    footer {
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      color: #888;
-      text-align: center;
-      padding: 1rem;
+    .footer {
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 100px;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid #ddd;
+    }
+
+    .footer img {
+      height: 24px;
+      vertical-align: middle;
+      margin-left: 8px;
     }
   </style>
 </head>
 <body>
 
+  <div class="spacer-top"></div>
+
+  <!-- Bannière avec image -->
   <div class="banner">
     <img src="image_GFF.png" alt="Forêt">
   </div>
 
-  <!-- Titre avec lien cliquable -->
-  <div class="title" data-aos="fade-up">
-    <a href="https://www.sycomore-cvl.fr/cpt-projets/les-projets-de-recherche-sycomore/ressources-genetiques-forestieres/" target="_blank">GenForFutur</a>
-  </div>
-
-  <!-- Bouton "Découvrir" -->
-  <a href="https://www.sycomore-cvl.fr/cpt-projets/les-projets-de-recherche-sycomore/ressources-genetiques-forestieres/" class="btn" data-aos="zoom-in" data-aos-delay="300">
-    Découvrir le projet
-  </a>
-
-  <div class="grid" data-aos="fade-up">
-    <a class="card" href="https://davidchnd.github.io/GFF_SPEI/qmd/SPEI_prov.html" target="_blank" data-aos="zoom-in" data-aos-delay="100">
+  <!-- Grille de cartes -->
+  <div class="grid">
+    <a class="card" href="https://davidchnd.github.io/GFF_SPEI/qmd/SPEI_prov.html" target="_blank">
       <h2>Analyses climatiques</h2>
-      <p></p>
+      <div class="arrow">›</div>
     </a>
 
-    <a class="card" href="https://davidchnd.github.io/GFF_Isotope/qmd/GFF_isotope.html" target="_blank" data-aos="zoom-in" data-aos-delay="200">
+    <a class="card" href="https://davidchnd.github.io/GFF_Isotope/qmd/GFF_isotope.html" target="_blank">
       <h2>Analyses isotopiques</h2>
-      <p></p>
+      <div class="arrow">›</div>
     </a>
   </div>
 
-  <footer id="footer-date">
-    <!-- Date insérée automatiquement -->
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+  <!-- Pied de page -->
+  <div class="footer">
+    <span>© David Chassagnaud</span>
+    <a href="https://github.com/DavidChnd" target="_blank">
+      <img src="logo-github.png" alt="GitHub">
+    </a>
+  </div>
 
 </body>
 </html>
