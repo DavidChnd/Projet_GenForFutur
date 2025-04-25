@@ -34,6 +34,8 @@
       height: auto;
       overflow: hidden;
       margin-bottom: 30px;
+      opacity: 0; /* Initialement invisible */
+      animation: fadeInBanner 1s ease-in forwards;
     }
 
     .banner img {
@@ -45,6 +47,16 @@
       box-shadow: 0 4px 12px var(--card-shadow);
     }
 
+    /* Animation fade pour l'image */
+    @keyframes fadeInBanner {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -52,6 +64,18 @@
       width: 100%;
       max-width: 1000px;
       padding: 2rem;
+      opacity: 0; /* Initialement invisible */
+      animation: fadeInGrid 1s ease-in 1s forwards; /* Retard de 1 seconde */
+    }
+
+    /* Animation fade pour la grille */
+    @keyframes fadeInGrid {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
     .card {
@@ -108,7 +132,6 @@
   </style>
 </head>
 <body>
-
   <div class="spacer-top"></div>
 
   <!-- Bannière avec image -->
@@ -136,6 +159,5 @@
       <img src="logo-github.png" alt="GitHub">
     </a>
   </div>
-
 </body>
 </html>
